@@ -1,0 +1,523 @@
+:root {
+    --font-family: "Orbitron", sans-serif;
+    --max-width: 1400px;
+    --primary-neon: #00ffa3; 
+    --secondary-neon: #b534ff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+  
+  body {
+    font-family: var(--font-family), sans-serif;
+    transition: background 1s ease, color 1s ease;
+    padding-top: 5rem; 
+    background: #0f0f0f; /* fixed black background */
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.8;
+    cursor: none;
+  }
+  
+  /* Fixed Header */
+  header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    padding: 1rem 2rem;
+    background: inherit;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    transition: background 1s ease, color 1s ease;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    width: 100%;
+  }
+  nav .logo {
+    font-weight: 700;
+    font-size: 2rem; 
+    color: var(--primary-neon);
+  }
+  nav .menu {
+    display: flex;
+    gap: 2rem;
+  }
+  nav .menu a {
+    text-decoration: none;
+    font-weight: 600;
+    color: inherit;
+    transition: color 0.3s ease;
+    font-size: 1.125rem;
+    cursor: none !important;
+  }
+  nav .menu a:hover {
+    color: var(--primary-neon);
+  }
+  
+  /* Prevent headings from hiding under fixed header */
+  section {
+    scroll-margin-top: 80px;
+  }
+  
+  /* Full-screen sections */
+  .screen {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content-wrapper {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3rem;
+  }
+  
+  /* HERO background with pixel-rain + blur + overlay */
+  #hero {
+    position: relative;
+    background: none !important;
+  }
+  #hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://img.freepik.com/free-vector/pixel-rain-abstract-background_23-2148380459.jpg")
+                center center / cover no-repeat;
+    filter: blur(4px);
+    z-index: -2;
+  }
+  #hero::after {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15,15,15,0.6);
+    z-index: -1;
+  }
+  #hero .content-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Hero Container */
+  .hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  .hero-left {
+    flex: 1;
+  }
+  .hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-left h1 {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-neon);
+  }
+  .hero-left p {
+    font-size: 1.8rem;
+    margin-bottom: 2.5rem;
+  }
+  .hero-left .cta-btn {
+    background: none;
+    color: var(--primary-neon);
+    padding: 1rem 2.5rem;
+    border: 2px solid var(--primary-neon);
+    border-radius: 5px;
+    font-size: 1.25rem;
+    cursor: none;
+    transition: 0.3s ease;
+  }
+  .hero-left .cta-btn:hover {
+    background: var(--primary-neon);
+    color: #000;
+  }
+  
+  /* Countdown Box */
+  .countdown-box {
+    border: 2px solid var(--primary-neon);
+    border-radius: 15px;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    min-width: 200px;
+  }
+  .countdown-box h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-neon);
+    font-size: 1.25rem;
+  }
+  #countdown {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Section Headings */
+  .screen h2 {
+    font-size: 3rem;
+    color: var(--secondary-neon);
+    margin-bottom: 2rem;
+  }
+  .screen p {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+  }
+  
+  /* Timeline */
+  .timeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  .timeline-step {
+    background: rgba(128,128,128,0.15);
+    border: 1px solid #555;
+    border-radius: 8px;
+    flex: 1 1 280px;
+    padding: 2rem;
+    text-align: center;
+  }
+  .timeline-step h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-neon);
+  }
+  
+  /* Registration Form */
+  .registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .registration-form input,
+  .registration-form button {
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #555;
+    background: rgba(128,128,128,0.15);
+    color: inherit;
+    cursor: none;
+  }
+  .registration-form button {
+    border: 2px solid var(--secondary-neon);
+    color: var(--secondary-neon);
+    background: none;
+    transition: 0.3s ease;
+  }
+  .registration-form button:hover {
+    background: var(--secondary-neon);
+    color: #000;
+  }
+  
+  /* FAQ */
+  .faq-item {
+    background: rgba(128,128,128,0.15);
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    text-align: left;
+  }
+  .faq-item h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    color: var(--primary-neon);
+    cursor: none;
+  }
+  .faq-item p {
+    display: none;
+    margin: 0;
+    padding: 0.75rem 0;
+    border-top: 1px solid #555;
+    font-size: 1.1rem;
+  }
+  
+  /* Sponsors - Horizontal Scrolling Section */
+  .sponsor-logos.horizontal-scroll {
+    display: flex;
+    gap: 3rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+  }
+  .sponsor-logos.horizontal-scroll .sponsor {
+    flex: 0 0 auto;
+  }
+  .sponsor img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  /* Netflix special style */
+  .sponsor img.netflix-logo {
+    width: 120px;
+    margin-top: -25px;
+  }
+  /* NVIDIA style */
+  .sponsor img.nvidia-logo {
+    width: 150px;
+  }
+  /* NEW: IBM, Intel custom widths if desired */
+  .sponsor img.ibm-logo {
+    width: 200px; /* or 120px if you want bigger */
+  }
+  .sponsor img.intel-logo {
+    width: 200px; /* or 120px if you want bigger */
+  }
+  /* 
+     NEW: ROUNDED BOX FOR SPONSORS 
+     Similar to the countdown box
+  */
+  .sponsors-box {
+    border: 2px solid var(--primary-neon);
+    border-radius: 15px;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    margin-top: 2rem; 
+    /* optional background if you want a subtle fill:
+       background: rgba(128,128,128,0.15);
+    */
+  }
+  
+  /* FOOTER with same pixel-rain background + blur + overlay */
+  footer {
+    position: relative;
+    width: 100%;
+    color: inherit;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.3);
+    background: none !important;
+  }
+  footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://img.freepik.com/free-vector/pixel-rain-abstract-background_23-2148380459.jpg")
+                center center / cover no-repeat;
+    filter: blur(4px);
+    z-index: -2;
+  }
+  footer::after {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15,15,15,0.6);
+    z-index: -1;
+  }
+  footer .content-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  footer p {
+    font-size: 1.3rem;
+  }
+  .social-container {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .social-container p {
+    margin-bottom: 0.5rem;
+  }
+  .social-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .social-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.3s, color 0.3s ease;
+    border: 2px solid #fff;
+    cursor: none;
+  }
+  .twitter-btn:hover {
+    background: #1da1f2;
+    color: #000;
+    border-color: #1da1f2;
+  }
+  .facebook-btn:hover {
+    background: #1877f2;
+    color: #fff;
+    border-color: #1877f2;
+  }
+  .instagram-btn:hover {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: #fff;
+    border-color: transparent;
+  }
+  
+  /* Fade/Slide Up Animation */
+  .hidden {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  .show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  
+  /* Custom Pointer (Hollow Neon Ring) */
+  .custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: 2px solid var(--primary-neon);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease, border 0.2s ease;
+    z-index: 999999;
+  }
+  .custom-cursor.enlarge {
+    transform: translate(-50%, -50%) scale(1.5);
+    border-width: 3px;
+  }
+  .custom-cursor.merged {
+    transform: none;
+  }
+  
+  /* Responsive Tweaks */
+  @media (max-width: 768px) {
+    nav .menu {
+      display: none;
+    }
+    .hero-container {
+      flex-direction: column;
+    }
+    .hero-left h1 {
+      font-size: 3rem;
+    }
+    .hero-left p {
+      font-size: 1.4rem;
+    }
+    .hero-left .cta-btn {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+    }
+    .screen h2 {
+      font-size: 2.5rem;
+    }
+  }
+
+  /* Prize Box (similar to .sponsors-box) */
+.prize-box {
+    border: 2px solid var(--primary-neon);
+    border-radius: 15px;
+    padding: 2rem 3rem; /* increased padding for a bigger box */
+    text-align: center;
+    margin-top: 2rem; 
+    /* optional subtle fill:
+       background: rgba(128,128,128,0.15);
+    */
+  }
+  /* Increase font sizes in the Prize section */
+#prizes h2 {
+    font-size: 4rem;    /* bigger heading */
+    text-align: center; /* optional: center the heading */
+  }
+  
+  #prizes p {
+    font-size: 2rem;    /* larger paragraph text */
+    text-align: center; /* optional: center the paragraph */
+  }
+  
+  .prizes-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: center; /* optional: center the list items */
+  }
+  
+  .prizes-list li {
+    font-size: 2rem;    /* bigger list item text */
+    margin-bottom: 1rem;
+  }
+/* Toggle button style (unchanged or adapt from your existing) */
+.toggle-participants-btn {
+    background: none;
+    color: var(--secondary-neon);
+    border: 2px solid var(--secondary-neon);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin: 1rem 0;
+    transition: 0.3s ease;
+  }
+  .toggle-participants-btn:hover {
+    background: var(--secondary-neon);
+    color: #000;
+  }
+  
+  .expanding-box {
+    width: 100%;
+    max-width: none; /* no cap on width */
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(128,128,128,0.15);
+    border: 1px solid #555;
+    border-radius: 8px;
+  }
+  .expanding-box label {
+    margin-top: 0.8rem;
+    display: block;
+    font-weight: 600;
+  }
+  
+  .expanding-box input {
+    margin-bottom: 1rem;
+    width: 100%; /* ensure each field stretches across the box */
+  }

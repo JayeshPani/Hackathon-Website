@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hackathon - Black BG + Pixel-Rain in Hero & Footer</title>
+
+  <!-- (Optional) Futuristic Font Import: Orbitron -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Fixed Header -->
+  <header>
+    <nav>
+      <div class="logo">NEON HACKATHON</div>
+      <div class="menu">
+        <a href="#about">About</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#registration">Register</a>
+        <a href="#faq">FAQ</a>
+        <a href="#sponsors">Sponsors</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECTION 1: Hero -->
+  <section class="screen reveal hidden" id="hero" data-index="0">
+    <div class="content-wrapper hero-container">
+      <div class="hero-left">
+        <h1>Hack the Future</h1>
+        <p>Join us for a cutting-edge innovation journey!</p>
+        <button class="cta-btn" id="registerButton">Register Now</button>
+      </div>
+      <div class="hero-right">
+        <div class="countdown-box">
+          <h3>Countdown to 16 March, 6 PM</h3>
+          <div id="countdown">Loading...</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: About -->
+  <section class="screen reveal hidden" id="about" data-index="1">
+    <div class="content-wrapper">
+      <h2>About the Hackathon</h2>
+      <p>
+        Dive into an atmosphere where brilliant minds unite 
+        to solve tomorrow’s challenges—today. Expand your skill set, 
+        connect with top innovators, and code your way into the future!
+      </p>
+      <p>
+        This hackathon is more than just a coding marathon—it’s a 
+        dynamic environment designed to foster <strong>creativity</strong>, 
+        <strong>collaboration</strong>, and <strong>breakthrough innovations</strong>. Whether 
+        you’re a seasoned developer, a budding entrepreneur, or a 
+        curious designer, you’ll find plenty of inspiration and 
+        support here.
+      </p>
+      <p>
+        Over the course of the event, you’ll have the opportunity to:
+      </p>
+      <ul>
+        <li><strong>Collaborate</strong> with like-minded peers on impactful projects</li>
+        <li><strong>Experiment</strong> with cutting-edge technologies and tools</li>
+        <li><strong>Showcase</strong> your ideas to industry experts and sponsors</li>
+        <li><strong>Learn</strong> from mentors through workshops and mini-sessions</li>
+      </ul>
+      <p>
+        Our goal is to spark <strong>bold solutions</strong> that address real-world problems 
+        while providing a platform for participants to <strong>grow</strong> and <strong>excel</strong> in 
+        their chosen fields. By the end of the hackathon, you’ll walk away with 
+        <strong>new skills</strong>, <strong>lasting connections</strong>, and a <strong>renewed sense of purpose</strong>
+        for driving innovation forward.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Timeline -->
+  <section class="screen reveal hidden" id="timeline" data-index="2">
+    <div class="content-wrapper">
+      <h2>Timeline</h2>
+      <div class="timeline">
+        <div class="timeline-step">
+          <h4>Registration</h4>
+          <p>March 1 - March 10</p>
+        </div>
+        <div class="timeline-step">
+          <h4>Team Formation</h4>
+          <p>March 11 - March 15</p>
+        </div>
+        <div class="timeline-step">
+          <h4>Hackathon</h4>
+          <p>March 16 - March 18</p>
+        </div>
+        <div class="timeline-step">
+          <h4>Project Submission</h4>
+          <p>March 19</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- SECTION X: Team Registration (Updated) -->
+<section class="screen reveal hidden" id="registration" data-index="3">
+    <div class="content-wrapper">
+      <h2>Team Registration</h2>
+      <p class="registration-intro">
+        Ready to form your dream team? Fill out the details below 
+        so we can help you kick off your hackathon experience smoothly! 
+        If you’re solo, just enter your own info—no worries, we’ll match 
+        you with other participants if needed.
+      </p>
+  
+      <form class="registration-form">
+        <!-- Basic Team Info -->
+        <label for="teamName">Team Name</label>
+        <input 
+          type="text" 
+          id="teamName" 
+          placeholder="E.g. The Innovators" 
+          required 
+        />
+  
+        <!-- Button to reveal participant details -->
+        <button type="button" class="toggle-participants-btn">
+          Show Participant Details
+        </button>
+  
+        <!-- Expanding box: for up to 4 participants -->
+        <div class="expanding-box" style="display: none;">
+          <p>Enter details for up to 4 participants (Reg. No., Name, Email)</p>
+  
+          <!-- Participant 1 -->
+          <label for="p1RegNo">Reg. No. (Participant 1)</label>
+          <input 
+            type="text" 
+            id="p1RegNo" 
+            placeholder="E.g. 123456"
+          />
+  
+          <label for="p1Name">Name (Participant 1)</label>
+          <input 
+            type="text" 
+            id="p1Name" 
+            placeholder="Participant 1 Name"
+          />
+  
+          <label for="p1Email">Email (Participant 1)</label>
+          <input 
+            type="email" 
+            id="p1Email" 
+            placeholder="participant1@example.com"
+          />
+  
+          <!-- Participant 2 -->
+          <label for="p2RegNo">Reg. No. (Participant 2)</label>
+          <input 
+            type="text" 
+            id="p2RegNo" 
+            placeholder="E.g. 234567"
+          />
+  
+          <label for="p2Name">Name (Participant 2)</label>
+          <input 
+            type="text" 
+            id="p2Name" 
+            placeholder="Participant 2 Name"
+          />
+  
+          <label for="p2Email">Email (Participant 2)</label>
+          <input 
+            type="email" 
+            id="p2Email" 
+            placeholder="participant2@example.com"
+          />
+  
+          <!-- Participant 3 -->
+          <label for="p3RegNo">Reg. No. (Participant 3)</label>
+          <input 
+            type="text" 
+            id="p3RegNo" 
+            placeholder="E.g. 345678"
+          />
+  
+          <label for="p3Name">Name (Participant 3)</label>
+          <input 
+            type="text" 
+            id="p3Name" 
+            placeholder="Participant 3 Name"
+          />
+  
+          <label for="p3Email">Email (Participant 3)</label>
+          <input 
+            type="email" 
+            id="p3Email" 
+            placeholder="participant3@example.com"
+          />
+  
+          <!-- Participant 4 -->
+          <label for="p4RegNo">Reg. No. (Participant 4)</label>
+          <input 
+            type="text" 
+            id="p4RegNo" 
+            placeholder="E.g. 456789"
+          />
+  
+          <label for="p4Name">Name (Participant 4)</label>
+          <input 
+            type="text" 
+            id="p4Name" 
+            placeholder="Participant 4 Name"
+          />
+  
+          <label for="p4Email">Email (Participant 4)</label>
+          <input 
+            type="email" 
+            id="p4Email" 
+            placeholder="participant4@example.com"
+          />
+        </div>
+        <!-- end of .expanding-box -->
+  
+        <!-- Terms & Conditions or Additional Info -->
+        <label class="checkbox-label" style="margin: 1rem 0; display: block;">
+          <input type="checkbox" required />
+          I have read and agree to the hackathon rules and guidelines.
+        </label>
+  
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+      </form>
+  
+      <p style="margin-top: 1rem; font-size: 0.95rem; color: #ccc;">
+        After submitting, keep an eye on your inbox for a confirmation email 
+        with further instructions. We can’t wait to see what you’ll build!
+      </p>
+    </div>
+  </section>
+  <!-- SECTION 5: FAQ -->
+  <section class="screen reveal hidden" id="faq" data-index="4">
+    <div class="content-wrapper">
+      <h2>FAQ</h2>
+      <div class="faq-item">
+        <h3>Who can participate?</h3>
+        <p>Anyone passionate about tech, design, or entrepreneurship. All skill levels welcome!</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if I don’t have a team?</h3>
+        <p>Register solo, and we’ll match you with others!</p>
+      </div>
+      <div class="faq-item">
+        <h3>What should I bring?</h3>
+        <p>A laptop, charger, and your boldest ideas. Snacks optional!</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need any prior experience?</h3>
+        <p>No! Hackathons are a great place to learn and grow. Beginners are welcome, and mentors are available to help you get started.</p>
+      </div>
+      <div class="faq-item">
+        <h3>	Can I submit a project I’ve already worked on?</h3>
+        <p>Generally, we encourage fresh ideas built during the hackathon. If you have an existing project, talk to the organizers about eligibility.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Will there be free food or snacks?</h3>
+        <p>Yes, we’ll provide refreshments and snacks throughout the event. If you have dietary restrictions, please let us know in your registration form.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Will there be mentors or workshops?</h3>
+        <p>Yes, experienced mentors from various fields will be on hand to guide you. We’ll also host mini-workshops on relevant technologies and best practices.</p>
+      </div>
+    </div>
+  </section>
+<!-- SECTION 6: Prize Money & Awards -->
+<section class="screen reveal hidden" id="prizes" data-index="6">
+    <div class="content-wrapper">
+      <!-- NEW ROUNDED BOX CONTAINER -->
+      <div class="prize-box">
+        <h2>Prize Money & Awards</h2>
+        <p>Win exciting cash prizes in rupees!</p>
+        <ul class="prizes-list">
+          <li><strong>First Prize:</strong> ₹4,00,000</li>
+          <li><strong>Second Prize:</strong> ₹2,00,000</li>
+          <li><strong>Third Prize:</strong> ₹1,00,000</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+ <!-- SECTION 7: Sponsors (Dark Gray background) -->
+<section class="screen reveal hidden" id="sponsors" data-index="5">
+    <div class="content-wrapper">
+      <!-- ROUNDED BOX for Sponsors -->
+      <div class="sponsors-box">
+        <h2>Our Sponsors</h2>
+        <p>Special thanks to these amazing partners who make this event possible!</p>
+  
+        <!-- Horizontal scrolling container for logos -->
+        <div class="sponsor-logos horizontal-scroll">
+          <div class="sponsor">
+            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="https://i.ibb.co/JR2WyxF0/Screenshot-2025-03-07-at-5-39-49-PM-fotor-bg-remover-20250307174053.png" 
+                alt="Google"
+              >
+            </a>
+          </div>
+          <div class="sponsor">
+            <a href="https://www.microsoft.com" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="https://i.ibb.co/kgXvrfsB/Screenshot-2025-03-07-at-7-55-05-PM.png" 
+                alt="Microsoft"
+              >
+            </a>
+          </div>
+          <div class="sponsor">
+            <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="https://i.ibb.co/tPJjYvFV/Screenshot-2025-03-07-at-8-12-50-PM.png" 
+                alt="Apple"
+              >
+            </a>
+          </div>
+          <div class="sponsor">
+            <a href="https://www.netflix.com" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="https://i.ibb.co/35wz2sR0/Screenshot-2025-03-07-at-9-52-29-PM.png" 
+                alt="Netflix" 
+                class="netflix-logo"
+              >
+            </a>
+          </div>
+          <div class="sponsor">
+            <a href="https://www.nvidia.com" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="https://i.ibb.co/rKYwW6X2/Screenshot-2025-03-07-at-10-08-13-PM.png" 
+                alt="NVIDIA" 
+                class="nvidia-logo"
+              >
+            </a>
+          </div>
+  
+          <!-- NEW SPONSOR 1: IBM -->
+          <div class="sponsor">
+            <a href="https://www.ibm.com" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="https://i.ibb.co/LXpCWhR8/Screenshot-2025-03-07-at-10-58-52-PM.png" 
+                alt="IBM" 
+                class="ibm-logo"
+              >
+            </a>
+          </div>
+
+  
+          <!-- NEW SPONSOR 2: Intel -->
+          <div class="sponsor">
+            <a href="https://www.intel.com" target="_blank" rel="noopener noreferrer">
+              <img 
+                src="https://i.ibb.co/fz3QnGzH/Screenshot-2025-03-07-at-11-00-46-PM.png" 
+                alt="Intel" 
+                class="intel-logo"
+              >
+            </a>
+          </div>
+  
+        </div>
+        <!-- end of .sponsor-logos -->
+      </div>
+      <!-- end of .sponsors-box -->
+    </div>
+  </section>
+ 
+  <!-- SECTION 8: Footer (with same background) -->
+  <footer class="screen reveal hidden" data-index="6">
+    <div class="content-wrapper">
+      <p>© 2025 Neon Hackathon. All rights reserved.</p>
+      <div class="social-container">
+        <p>Spread the word:</p>
+        <div class="social-buttons">
+          <a class="social-btn twitter-btn"
+             href="https://twitter.com/intent/tweet?text=Join%20the%20Neon%20Hackathon!%20&hashtags=NeonHack"
+             target="_blank" rel="noopener noreferrer">
+            Twitter
+          </a>
+          <a class="social-btn facebook-btn"
+             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fexample.com%2Fhackathon"
+             target="_blank" rel="noopener noreferrer">
+            Facebook
+          </a>
+          <a class="social-btn instagram-btn"
+             href="https://www.instagram.com/YourHackathonProfile/"
+             target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom pointer element -->
+  <div class="custom-cursor"></div>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
