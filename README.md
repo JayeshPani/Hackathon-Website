@@ -23,9 +23,13 @@ Folder Structure
 
 your-project/
 │
+
 ├─ index.html
+
 ├─ style.css
+
 ├─ script.js
+
 └─ README.md  <-- this file
 
 	•	index.html: The main landing page with all sections (hero, about, timeline, registration, FAQ, sponsors, prizes, footer).
