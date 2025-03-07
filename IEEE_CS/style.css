@@ -503,21 +503,26 @@
   }
   
   .expanding-box {
-    width: 100%;
-    max-width: none; /* no cap on width */
-    margin-top: 1rem;
-    padding: 1rem;
-    background: rgba(128,128,128,0.15);
+    position: relative;
+    width: 150%;
+    max-width: none; 
+    margin: 0.5rem 0; /* vertical spacing */
+    padding: 0.5rem;
+    background: rgba(128, 128, 128, 0.15);
     border: 1px solid #555;
     border-radius: 8px;
+  
+    /* SHIFT the box left by 25% (or tweak as needed) */
+    left: -25%; 
   }
+  
+  /* The rest remains unchanged */
   .expanding-box label {
     margin-top: 0.8rem;
     display: block;
     font-weight: 600;
   }
-  
   .expanding-box input {
     margin-bottom: 1rem;
-    width: 100%; /* ensure each field stretches across the box */
+    width: 100%;
   }
