@@ -1,5 +1,3 @@
-README.md
-
 Neon Hackathon Landing Page
 
 A modern, futuristic hackathon landing page featuring:
